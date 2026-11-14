@@ -19,6 +19,9 @@ class Settings(BaseSettings):
     OPENAI_API_KEY: str = ""
     GOOGLE_API_KEY: str = ""
 
+    TEMPERATURE: float
+    MAX_TOKENS: int
+
     LLM_PROVIDER: str
     LLM_MODEL: str
 

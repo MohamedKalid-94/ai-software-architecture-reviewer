@@ -1,32 +1,36 @@
-fastapi
-uvicorn
+# =====================================================
+# AI Frameworks
+# =====================================================
 
-streamlit
+langchain>=0.3.0
+langgraph>=0.2.0
+langsmith>=0.2.0
+
+# =====================================================
+# LLM Providers
+# =====================================================
+
+langchain-openai>=0.2.0
+langchain-google-genai>=2.0.0
+
+openai>=1.0.0
+
+# =====================================================
+# Embeddings
+# =====================================================
+
+tiktoken
+
+# =====================================================
+# Utilities
+# =====================================================
 
 python-dotenv
-
 pydantic
 pydantic-settings
 
 loguru
 
-langchain
-langgraph
-langsmith
-
-langchain-openai
-langchain-google-genai
-
-chromadb
-
-pymupdf
-
-unstructured
-
-tiktoken
-
-pytest
+requests
 
 httpx
-
-requests

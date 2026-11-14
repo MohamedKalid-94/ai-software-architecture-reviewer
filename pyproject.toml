@@ -1,0 +1,23 @@
+[project]
+name = "ai-software-architecture-reviewer"
+
+version = "0.1.0"
+
+description = "Enterprise AI Software Architecture Reviewer"
+
+requires-python = ">=3.11"
+
+authors = [
+    {name = "Mohamed Kalid"}
+]
+
+dependencies = []
+
+[tool.black]
+line-length = 88
+
+[tool.ruff]
+line-length = 88
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

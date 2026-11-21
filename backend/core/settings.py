@@ -28,6 +28,9 @@ class Settings(BaseSettings):
     EMBEDDING_PROVIDER: str
     EMBEDDING_MODEL: str
 
+    OLLAMA_BASE_URL: str = "http://localhost:11434"
+    OLLAMA_EMBEDDING_MODEL: str = "nomic-embed-text"
+
     LANGCHAIN_TRACING_V2: bool
     LANGCHAIN_ENDPOINT: str
     LANGCHAIN_API_KEY: str = ""

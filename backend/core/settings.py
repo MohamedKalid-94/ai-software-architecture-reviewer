@@ -33,6 +33,10 @@ class Settings(BaseSettings):
     LANGCHAIN_API_KEY: str = ""
     LANGCHAIN_PROJECT: str
 
+    UPLOAD_DIR: str = "backend/storage/uploads"
+    MAX_UPLOAD_SIZE_MB: int = 20
+    ALLOWED_EXTENSIONS: str = "pdf"
+
     model_config = SettingsConfigDict(
         env_file=".env",
         case_sensitive=True,

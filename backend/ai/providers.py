@@ -1,8 +1,6 @@
-"""
-Provider Definitions
+from enum import Enum
 
-Supported Providers
 
-- OpenAI
-- Google Gemini
-"""
+class LLMProvider(str, Enum):
+    OPENAI = "openai"
+    GOOGLE = "google"

@@ -36,3 +36,6 @@ requests
 httpx
 
 pypdf
+pip install pdfplumber
+
+pip install langchain-text-splitters

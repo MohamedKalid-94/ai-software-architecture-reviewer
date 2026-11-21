@@ -37,6 +37,9 @@ class Settings(BaseSettings):
     MAX_UPLOAD_SIZE_MB: int = 20
     ALLOWED_EXTENSIONS: str = "pdf"
 
+    CHUNK_SIZE: int = 1000
+    CHUNK_OVERLAP: int = 200
+
     model_config = SettingsConfigDict(
         env_file=".env",
         case_sensitive=True,

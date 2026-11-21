@@ -1,5 +1,76 @@
+<<<<<<< HEAD
 venv/
 __pycache__/
 .env
 *.pyc
 .streamlit/
+=======
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Environment Variables
+.env
+
+# Logs
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Streamlit
+.streamlit/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# Cache
+.cache/
+.mypy_cache/
+
+# Database
+*.db
+*.sqlite3
+
+# Chroma
+chroma/
+
+# Uploaded Documents
+documents/uploads/
+
+# Temporary Files
+tmp/
+temp/
+
+# Bytecode
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Secrets
+*.pem
+*.key
+>>>>>>> b166cd258ae12270b896eb51117873cbb952c280

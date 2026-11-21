@@ -2,13 +2,18 @@ from fastapi import APIRouter, File, UploadFile
 
 from backend.schemas.upload import UploadResponse
 from backend.services.upload_service import UploadService
+from backend.services.metadata_service import MetadataService
+
 
 router = APIRouter(
     prefix="/upload",
     tags=["Upload"],
 )
 
+
 upload_service = UploadService()
+
+metadata_service = MetadataService()
 
 
 @router.post(
@@ -21,8 +26,14 @@ async def upload_document(
 
     saved_file = upload_service.save_file(file)
 
+    metadata = metadata_service.generate(
+        saved_file
+    )
+
+
     return UploadResponse(
-        filename=saved_file.name,
-        file_size=saved_file.stat().st_size,
+
         message="File uploaded successfully",
+
+        document=metadata,
     )

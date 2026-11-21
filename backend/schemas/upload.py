@@ -1,7 +1,8 @@
 from pydantic import BaseModel
+from backend.schemas.document import DocumentMetadata
 
 
 class UploadResponse(BaseModel):
-    filename: str
-    file_size: int
+
     message: str
+    document: DocumentMetadata

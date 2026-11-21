@@ -34,3 +34,5 @@ loguru
 requests
 
 httpx
+
+pypdf

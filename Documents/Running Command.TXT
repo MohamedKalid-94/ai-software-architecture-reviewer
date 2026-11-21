@@ -1,0 +1,60 @@
+Story 2.1 Part 1
+	http://localhost:8000/docs
+
+You should now see:
+	POST
+		/api/v1/upload
+	
+	Upload any PDF.
+
+Expected response:
+{
+  "filename": "architecture.pdf",
+  "file_size": 154238,
+  "message": "File uploaded successfully"
+}
+
+Story 2.1 Part 2
+Test Invalid File:
+	Try uploading: architecture.docx
+Expected:
+	Only PDF files are allowed.
+
+Test Large File
+	Upload a PDF larger than: 20 MB
+Expected:
+	Maximum file size is 20 MB.
+
+Test Valid File
+Upload:architecture.pdf
+
+Expected response:
+{
+    "filename": "architecture.pdf",
+    "file_size": 256832,
+    "message": "File uploaded successfully"
+}
+
+Story 2.1 Part 3
+Test Upload: uvicorn backend.main:app --reload
+Open: http://localhost:8000/docs
+
+Test:
+	POST /api/v1/upload
+
+Upload:
+	architecture.pdf
+
+Expected response:
+{
+  "message": "File uploaded successfully",
+  "document": {
+    "document_id": "8d7f3a2b-xxxx",
+    "filename": "uuid_architecture.pdf",
+    "file_path": "backend/storage/uploads/uuid_architecture.pdf",
+    "file_size": 154238,
+    "file_type": "pdf",
+    "uploaded_at": "2026-11-20T23:18:00"
+  }
+}
+

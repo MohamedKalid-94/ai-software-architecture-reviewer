@@ -1,11 +1,23 @@
+# ==========================================
+# ArchAI Reviewer - Python Dependencies
+# Milestone 1 Foundation
+# ==========================================
+
+
+# Backend Framework
 fastapi
-uvicorn
+uvicorn[standard]
+
+
+# Frontend
 streamlit
 
-# Configuration
+
+# Configuration Management
 python-dotenv
 pydantic
 pydantic-settings
+
 
 # AI Framework
 langchain
@@ -14,12 +26,16 @@ langchain-ollama
 langgraph
 langsmith
 
+
 # Embeddings & Tokenization
 tiktoken
 
-# Utilities
+
+# HTTP Clients
 httpx
 requests
 
+
 # Logging
 python-json-logger
+python-multipart

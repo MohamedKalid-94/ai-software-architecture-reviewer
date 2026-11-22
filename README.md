@@ -208,31 +208,71 @@ Schemas imported successfully ✅
 
 ---
 
-# Next Milestone
+# Milestone 2 — Document Intelligence & Evidence Layer
 
-## Milestone 2 — Document Intelligence & Evidence Layer
+**Status:** 🚧 In Progress
 
-Objective:
+## Story 2.1 — Document Upload System
 
-Build trusted document understanding capabilities.
+**Status:** ✅ Completed
 
-Upcoming:
+### Objective
 
-- Document upload API
-- Document validation
-- PDF processing
-- Metadata extraction
-- Evidence management
+Provide a secure document upload pipeline that validates, stores, and prepares architecture documents for future AI processing.
 
-Next Story:
+### Features Implemented
 
-**Story 2.1 — Document Upload System**
+- Document Upload API
+- PDF Validation
+- File Size Validation
+- File Type Validation
+- Document Storage
+- Metadata Generation
+- Upload Status Tracking
+
+### API Endpoint
+
 ```
+POST /documents/upload
+```
+
+### Upload Flow
+
+```
+Client
+   │
+   ▼
 Upload API
-    |
+   │
+   ▼
 Document Validation
-    |
-Metadata Generation
-    |
+   │
+   ▼
 Document Storage
+   │
+   ▼
+Metadata Generation
+   │
+   ▼
+Upload Complete
 ```
+
+### Current Capabilities
+
+- Accept PDF architecture documents
+- Validate upload requests
+- Store uploaded documents
+- Generate upload metadata
+- Track upload completion status
+
+### Next Story
+
+**Story 2.2 — Document Processing Pipeline**
+
+Planned features:
+
+- PDF text extraction
+- Page parsing
+- Content chunking
+- Document preprocessing
+- Processing status tracking

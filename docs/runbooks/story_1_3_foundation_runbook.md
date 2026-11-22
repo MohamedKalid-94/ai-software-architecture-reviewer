@@ -195,6 +195,35 @@ Schemas imported successfully ✅
 
 ---
 
+## Validate AI Platform Configuration
+
+Run:
+
+```bash
+python -m ai_engine.validation.ai_platform_check
+```
+
+Expected:
+
+```text
+============================================================
+ArchAI Reviewer - AI Platform Validation
+============================================================
+
+✓ Configuration loaded
+
+✓ LLM connection successful
+
+✓ Embedding generation successful
+
+✓ LangSmith tracing enabled
+
+
+AI Platform Ready ✅
+```
+
+---
+
 # Completion Criteria
 
 | Item | Status |

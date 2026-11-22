@@ -265,14 +265,106 @@ Upload Complete
 - Generate upload metadata
 - Track upload completion status
 
-### Next Story
+# Story 2.2 — Document Intelligence Pipeline
 
-**Story 2.2 — Document Processing Pipeline**
+**Status:** ✅ Completed
 
-Planned features:
+## Objective
 
-- PDF text extraction
-- Page parsing
-- Content chunking
-- Document preprocessing
-- Processing status tracking
+Transform uploaded architecture documents into structured intelligence data for future AI processing workflows.
+
+The pipeline extracts document content, preserves structure, and generates metadata required for RAG and AI review capabilities.
+
+---
+
+## Features Implemented
+
+### PDF Processing
+
+- PDF parsing
+- Page extraction
+- Text extraction
+
+### Document Structure Analysis
+
+- Page metadata extraction
+- Heading extraction
+- Section detection
+
+### Document Intelligence
+
+- Table extraction
+- Document classification
+- Structured document output
+
+---
+
+## Document Processing Flow
+
+```text
+Uploaded Document
+        |
+        ▼
+PDF Parser
+        |
+        ▼
+Page Extraction
+        |
+        ▼
+Structure Analyzer
+        |
+        +----------------+
+        |                |
+        ▼                ▼
+ Metadata           Headings
+        |
+        ▼
+ Sections
+        |
+        ▼
+ Tables
+        |
+        ▼
+Document Classification
+        |
+        ▼
+Structured Document
+```
+
+---
+
+## Current Capabilities
+
+The Document Intelligence Pipeline can:
+
+- Read uploaded PDF documents
+- Extract page-level content
+- Identify headings
+- Detect document sections
+- Extract tables
+- Classify document type
+- Generate structured document metadata
+
+---
+
+## Technology Components
+
+| Component | Technology |
+|---|---|
+| PDF Parsing | PyMuPDF |
+| Table Extraction | pdfplumber |
+| API Layer | FastAPI |
+| Processing Layer | Python Services |
+
+---
+
+## Next Story
+
+**Story 2.3 — Text Chunking & Embeddings Pipeline**
+
+Planned:
+
+- Semantic text chunking
+- Token management
+- Embedding generation
+- Vector preparation

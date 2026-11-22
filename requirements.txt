@@ -39,3 +39,5 @@ requests
 # Logging
 python-json-logger
 python-multipart
+
+pdfplumber

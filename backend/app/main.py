@@ -2,11 +2,11 @@ from fastapi import FastAPI
 
 from backend.app.config.settings import settings
 from backend.app.config.logging_config import setup_logging, logger
+from backend.app.middleware.error_handler import (global_exception_handler)
+from backend.app.config.langsmith import configure_langsmith
 
-from backend.app.middleware.error_handler import (
-    global_exception_handler
-)
 
+configure_langsmith()
 
 setup_logging()
 

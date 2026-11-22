@@ -1,6 +1,25 @@
 fastapi
 uvicorn
 streamlit
-requests
+
+# Configuration
 python-dotenv
+pydantic
 pydantic-settings
+
+# AI Framework
+langchain
+langchain-core
+langchain-ollama
+langgraph
+langsmith
+
+# Embeddings & Tokenization
+tiktoken
+
+# Utilities
+httpx
+requests
+
+# Logging
+python-json-logger

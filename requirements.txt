@@ -25,7 +25,7 @@ langchain-core
 langchain-ollama
 langgraph
 langsmith
-
+langchain-text-splitters
 
 # Embeddings & Tokenization
 tiktoken

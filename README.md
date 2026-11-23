@@ -10,17 +10,17 @@ An AI-powered software architecture review platform that analyzes architecture a
 - LangSmith observability
 - AI evaluation pipelines
 
-The platform generates evidence-backed architecture recommendations.
+The platform generates evidence-backed architecture recommendations with source traceability.
 
 ---
 
-# Current Development Status
+# Development Status
 
 ## Milestone 1 — AI Platform Foundation
 
 **Status: Completed ✅**
 
-Objective:
+## Objective
 
 Establish the application foundation, AI connectivity, configuration management, and domain contracts.
 
@@ -38,333 +38,218 @@ Establish the application foundation, AI connectivity, configuration management,
 
 # Story 1.1 — Initialize Application Platform
 
-Implemented:
+## Implemented
 
 ✅ FastAPI backend foundation  
 ✅ Streamlit frontend foundation  
 ✅ Project structure  
+✅ Python virtual environment  
 ✅ Environment configuration  
-✅ Logging framework  
-✅ Configuration management  
-✅ Error handling foundation  
+✅ Settings management  
+✅ Structured logging  
+✅ Error handling middleware  
 
-
-Backend execution:
+## Backend Execution
 
 ```bash
 uvicorn backend.app.main:app --reload
-```
 
-
-Frontend execution:
-
-```bash
+## Frontend Execution
 streamlit run frontend/app.py
-```
-
----
 
 # Story 1.2 — Configure GenAI Platform
-
-Implemented:
-
-## LLM Integration
-
+LLM Integration
 Technology:
-
 - LangChain
 - Ollama
 - qwen2.5:3b
 
-
-## Embedding Integration
-
+Embedding Integration
 Technology:
-
 - Ollama Embeddings
 - nomic-embed-text
 
-
-## Observability
-
+Observability
 Technology:
-
 - LangSmith
 
-
 Capabilities:
-
 - LLM tracing
-- Prompt monitoring
-- Execution tracking
+- Prompt execution monitoring
+- AI workflow observability
 
----
-
-# Story 1.3 — Define Core Data Models
-
-Implemented domain foundation for future AI workflows.
-
-## Domain Models
-
+Story 1.3 — Define Core Data Models
+Domain Models
 Created:
-
-```
 Project
 Document
 Review
 Finding
 Evaluation
-```
 
 Location:
-
-```
 backend/app/models
-```
 
----
-
-## API Schemas
-
+API Schemas
 Created:
-
-```
 ProjectSchema
 DocumentSchema
 ReviewSchema
 FindingSchema
 EvaluationSchema
-```
 
 Location:
-
-```
 backend/app/schemas
-```
 
----
-
-## Validation
-
+Validation
 Completed:
-
-✅ Model validation  
-✅ Schema validation  
-✅ Import integration testing  
-
-
-Validation result:
-
-```
 Models imported successfully ✅
 Schemas imported successfully ✅
-```
 
----
+Milestone 2 — Document Intelligence & Evidence Layer
+Status: Completed ✅
+Objective
+Build trusted document understanding with evidence references.
+Completed Stories
+Story	Description	Status
+Story 2.1	Document Upload System	✅ Completed
+Story 2.2	Document Intelligence Pipeline	✅ Completed
+Story 2.3	Evidence Management System	✅ Completed
 
-# Current Architecture Foundation
 
-```
+Story 2.1 — Document Upload System
+Implemented
+✅ Document upload API
+✅ PDF validation
+✅ File type validation
+✅ File size validation
+✅ Document storage
+✅ Metadata generation
+✅ Upload status tracking  
+Capabilities
+The system can:
+- Accept architecture documents
+- Validate uploaded files
+- Store documents securely
+- Generate document metadata
+Story 2.2 — Document Intelligence Pipeline
+Implemented
+✅ PDF parsing
+✅ Page extraction
+✅ Heading extraction
+✅ Section detection
+✅ Document classification
+✅ Metadata extraction  
+Capabilities
+The system can:
+- Extract document content
+- Preserve document structure
+- Identify sections
+- Prepare documents for evidence creation
+Story 2.3 — Evidence Management System
+Implemented
+✅ Evidence domain model
+✅ Evidence schema
+✅ Source reference tracking
+✅ Evidence retrieval
+✅ Citation generation
+✅ Source linking foundation  
+Evidence Schema
+{
+    "document":"",
+    "page":"",
+    "section":"",
+    "content":""
+}
+
+Example Evidence Record
+{
+    "document":"architecture.pdf",
+    "page":"12",
+    "section":"Database Architecture",
+    "content":"Database does not have replication configured"
+}
+
+Validation
+Evidence validation passed ✅
+
+Current Architecture Foundation
                     ArchAI Reviewer
 
-                           |
-                           |
 
-                    FastAPI Backend
+                          |
 
-                           |
+                  FastAPI Backend
 
-        +------------------+------------------+
 
-        |                                     |
+                          |
 
-   AI Platform Layer                  Domain Layer
+        +-----------------+-----------------+
 
-        |                                     |
+        |                                   |
 
- LangChain + Ollama                 Models + Schemas
+Document Intelligence              AI Platform Layer
 
+        |                                   |
+
+Evidence Management              LangChain + Ollama
+
+                                            |
+
+                                      LangSmith
+
+
+
+Technology Stack
+Layer	Technology
+Backend	FastAPI
+Frontend	Streamlit
+Language	Python 3.12
+LLM Framework	LangChain
+Agent Framework	LangGraph
+LLM Runtime	Ollama
+LLM Model	qwen2.5:3b
+Embedding Model	nomic-embed-text
+Observability	LangSmith
+Validation	Pydantic
+
+
+Upcoming Milestone
+Milestone 3 — Enterprise RAG Pipeline
+Status: Planned 🚧
+Objective
+Build accurate knowledge retrieval for architecture review workflows.
+Planned Stories
+Story	Description
+Story 3.1	Build Embedding Pipeline
+Story 3.2	Implement Hybrid Retrieval
+Story 3.3	Implement Reranking
+Story 3.4	Context Optimization
+
+
+Development Roadmap
+Milestone 1
+AI Platform Foundation
         |
-
- LangSmith Observability
-
-```
-
----
-
-# Technology Stack
-
-| Layer | Technology |
-|---|---|
-| Backend | FastAPI |
-| Frontend | Streamlit |
-| Language | Python 3.12 |
-| LLM Framework | LangChain |
-| LLM Runtime | Ollama |
-| LLM Model | qwen2.5:3b |
-| Embedding Model | nomic-embed-text |
-| Observability | LangSmith |
-| Validation | Pydantic |
-
----
-
-# Milestone 2 — Document Intelligence & Evidence Layer
-
-**Status:** 🚧 In Progress
-
-## Story 2.1 — Document Upload System
-
-**Status:** ✅ Completed
-
-### Objective
-
-Provide a secure document upload pipeline that validates, stores, and prepares architecture documents for future AI processing.
-
-### Features Implemented
-
-- Document Upload API
-- PDF Validation
-- File Size Validation
-- File Type Validation
-- Document Storage
-- Metadata Generation
-- Upload Status Tracking
-
-### API Endpoint
-
-```
-POST /documents/upload
-```
-
-### Upload Flow
-
-```
-Client
-   │
-   ▼
-Upload API
-   │
-   ▼
-Document Validation
-   │
-   ▼
-Document Storage
-   │
-   ▼
-Metadata Generation
-   │
-   ▼
-Upload Complete
-```
-
-### Current Capabilities
-
-- Accept PDF architecture documents
-- Validate upload requests
-- Store uploaded documents
-- Generate upload metadata
-- Track upload completion status
-
-# Story 2.2 — Document Intelligence Pipeline
-
-**Status:** ✅ Completed
-
-## Objective
-
-Transform uploaded architecture documents into structured intelligence data for future AI processing workflows.
-
-The pipeline extracts document content, preserves structure, and generates metadata required for RAG and AI review capabilities.
-
----
-
-## Features Implemented
-
-### PDF Processing
-
-- PDF parsing
-- Page extraction
-- Text extraction
-
-### Document Structure Analysis
-
-- Page metadata extraction
-- Heading extraction
-- Section detection
-
-### Document Intelligence
-
-- Table extraction
-- Document classification
-- Structured document output
-
----
-
-## Document Processing Flow
-
-```text
-Uploaded Document
+        | ✅ Completed
         |
-        ▼
-PDF Parser
+Milestone 2
+Document Intelligence & Evidence Layer
         |
-        ▼
-Page Extraction
+        | ✅ Completed
         |
-        ▼
-Structure Analyzer
+Milestone 3
+Enterprise RAG Pipeline
         |
-        +----------------+
-        |                |
-        ▼                ▼
- Metadata           Headings
+        | 🚧 Planned
         |
-        ▼
- Sections
-        |
-        ▼
- Tables
-        |
-        ▼
-Document Classification
-        |
-        ▼
-Structured Document
-```
+Milestone 4
+Multi-Agent Architecture Review
 
----
-
-## Current Capabilities
-
-The Document Intelligence Pipeline can:
-
-- Read uploaded PDF documents
-- Extract page-level content
-- Identify headings
-- Detect document sections
-- Extract tables
-- Classify document type
-- Generate structured document metadata
-
----
-
-## Technology Components
-
-| Component | Technology |
-|---|---|
-| PDF Parsing | PyMuPDF |
-| Table Extraction | pdfplumber |
-| API Layer | FastAPI |
-| Processing Layer | Python Services |
-
----
-
-## Next Story
-
-**Story 2.3 — Text Chunking & Embeddings Pipeline**
-
-Planned:
-
-- Semantic text chunking
-- Token management
-- Embedding generation
-- Vector preparation
+Project Vision
+ArchAI Reviewer will evolve into an enterprise AI architecture review platform capable of:
+- Understanding architecture documents
+- Retrieving relevant engineering knowledge
+- Producing evidence-backed findings
+- Providing architecture improvement recommendations
+- Supporting multi-agent AI review workflows

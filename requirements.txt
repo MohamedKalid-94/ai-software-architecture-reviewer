@@ -41,3 +41,5 @@ python-json-logger
 python-multipart
 
 pdfplumber
+
+rank-bm25

@@ -34,6 +34,20 @@ class VectorIndexService:
         )
 
 
-    def get_index():
+
+    def get_index(self):
 
         return self.vector_store.get_vectors()
+
+
+
+    def search(
+        self,
+        query_embedding,
+        top_k=5
+    ):
+
+        return self.vector_store.search(
+            query_embedding,
+            top_k
+        )
